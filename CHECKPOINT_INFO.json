@@ -1,0 +1,22 @@
+{
+    "checkpoint": "voice_text_triage_v1",
+    "voice_mode": true,
+    "text_mode": true,
+    "voice_failure_text_fallback": true,
+    "mode_switching": true,
+    "state_machine": true,
+    "v3_model_preserved": true,
+    "model_features": 34,
+    "trained_emergency_types": [
+        "Animal Bite",
+        "Heart Attack",
+        "Stroke",
+        "Poisoning",
+        "Electric Shock",
+        "Drowning",
+        "Fracture",
+        "Weapon Injury",
+        "Fall From Height",
+        "Road Accident"
+    ]
+}

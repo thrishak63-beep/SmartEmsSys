@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | SmartEMS</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="../index.html" class="logo">
+        <span class="logo-icon">+</span>
+        <span>Smart<span class="logo-red">EMS</span></span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <div class="nav-actions">
+        <a href="emergency.html" class="dashboard-emergency">
+            Emergency
+        </a>
+
+        <a href="login.html" class="login-link">
+            Logout
+        </a>
+    </div>
+
+</header>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<main class="dashboard-page">
+
+    <div class="dashboard-container">
+
+
+        <!-- WELCOME -->
+
+        <section class="dashboard-welcome">
+
+            <div>
+
+                <span class="dashboard-eyebrow">
+                    USER DASHBOARD
+                </span>
+
+                <h1>
+                    Welcome back, <span>there.</span>
+                </h1>
+
+                <p>
+                    Manage your emergency profile and access
+                    SmartEMS response services from one place.
+                </p>
+
+            </div>
+
+            <a href="emergency.html" class="dashboard-sos">
+                🚨 Request Emergency Help
+            </a>
+
+        </section>
+
+
+        <!-- QUICK STATS -->
+
+        <section class="dashboard-stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🚑
+                </div>
+
+                <div>
+                    <span>Active Requests</span>
+                    <strong>0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📍
+                </div>
+
+                <div>
+                    <span>Current Status</span>
+                    <strong>Ready</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏥
+                </div>
+
+                <div>
+                    <span>Emergency Cases</span>
+                    <strong>0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <span>Profile Status</span>
+                    <strong>Complete</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MAIN GRID -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- EMERGENCY STATUS -->
+
+            <div class="dashboard-card emergency-status-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <span class="card-label">
+                            EMERGENCY RESPONSE
+                        </span>
+
+                        <h2>
+                            No active emergency
+                        </h2>
+                    </div>
+
+                    <span class="status-badge ready">
+                        ● Ready
+                    </span>
+
+                </div>
+
+
+                <div class="empty-emergency">
+
+                    <div class="empty-icon">
+                        🚑
+                    </div>
+
+                    <h3>
+                        You're all set
+                    </h3>
+
+                    <p>
+                        If you need emergency assistance,
+                        use the SOS button to request help.
+                    </p>
+
+                    <a href="emergency.html" class="dashboard-button">
+                        Get Emergency Help
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <div class="dashboard-card profile-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <span class="card-label">
+                            YOUR PROFILE
+                        </span>
+
+                        <h2>
+                            Emergency Information
+                        </h2>
+                    </div>
+
+                    <span class="profile-edit">
+                        Edit
+                    </span>
+
+                </div>
+
+
+                <div class="profile-details">
+
+                    <div class="profile-row">
+
+                        <span>
+                            Full Name
+                        </span>
+
+                        <strong>
+                            Your Name
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-row">
+
+                        <span>
+                            Phone Number
+                        </span>
+
+                        <strong>
+                            +91 XXXXX XXXXX
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-row">
+
+                        <span>
+                            Email
+                        </span>
+
+                        <strong>
+                            your@email.com
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-row">
+
+                        <span>
+                            Emergency Contact
+                        </span>
+
+                        <strong>
+                            Not added
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="quick-section">
+
+            <div class="section-heading-dashboard">
+
+                <div>
+
+                    <span class="card-label">
+                        QUICK ACCESS
+                    </span>
+
+                    <h2>
+                        What do you need?
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+
+                <a href="emergency.html" class="quick-card emergency-quick">
+
+                    <div class="quick-icon">
+                        🚨
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Emergency Assistance
+                        </h3>
+
+                        <p>
+                            Request immediate emergency help.
+                        </p>
+
+                    </div>
+
+                    <span class="quick-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <a href="tracking.html" class="quick-card">
+
+                    <div class="quick-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Track Ambulance
+                        </h3>
+
+                        <p>
+                            View ambulance location and ETA.
+                        </p>
+
+                    </div>
+
+                    <span class="quick-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <a href="about.html" class="quick-card">
+
+                    <div class="quick-icon">
+                        ℹ️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            SmartEMS Services
+                        </h3>
+
+                        <p>
+                            Learn how the emergency system works.
+                        </p>
+
+                    </div>
+
+                    <span class="quick-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- RECENT ACTIVITY -->
+
+        <section class="activity-section">
+
+            <div class="section-heading-dashboard">
+
+                <div>
+
+                    <span class="card-label">
+                        ACTIVITY
+                    </span>
+
+                    <h2>
+                        Recent Emergency Requests
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="activity-card">
+
+                <div class="activity-empty">
+
+                    <div class="activity-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        No emergency requests yet
+                    </h3>
+
+                    <p>
+                        Your emergency request history will
+                        appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <a href="../index.html" class="logo footer-logo">
+                <span class="logo-icon">+</span>
+                <span>Smart<span class="logo-red">EMS</span></span>
+            </a>
+
+            <p>
+                Intelligent Emergency Triage &
+                Ambulance Dispatch System.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Platform</h4>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Account</h4>
+
+            <a href="login.html">
+                User Login
+            </a>
+
+            <a href="signup.html">
+                Create Account
+            </a>
+
+            <a href="admin-login.html">
+                Admin Portal
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Emergency</h4>
+
+            <a href="emergency.html">
+                Request Assistance
+            </a>
+
+            <a href="tracking.html">
+                Track Ambulance
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 SmartEMS. Academic Project.
+        </span>
+
+        <span>
+            Emergency Medical Response System
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script src="../js/script.js"></script>
+<script src="../js/dashboard.js"></script>
+
+</body>
+</html>

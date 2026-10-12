@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Assistance | SmartEMS</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        .adaptive-card {
+            margin-top: 28px;
+            padding: 28px;
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: 0 8px 28px rgba(15, 23, 42, 0.05);
+            text-align: left;
+        }
+
+        .adaptive-card h2 {
+            margin: 0 0 10px;
+            color: #172033;
+            font-size: 1.45rem;
+        }
+
+        .adaptive-intro {
+            margin-bottom: 20px;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .adaptive-label {
+            display: block;
+            margin: 16px 0 8px;
+            color: #273449;
+            font-weight: 600;
+        }
+
+        .adaptive-input,
+        .adaptive-select {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            background: #fff;
+            color: #172033;
+            font: inherit;
+        }
+
+        .adaptive-input:focus,
+        .adaptive-select:focus {
+            outline: 2px solid #bfdbfe;
+            border-color: #2563eb;
+        }
+
+        .adaptive-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .adaptive-button {
+            padding: 12px 18px;
+            border: 0;
+            border-radius: 10px;
+            background: #172554;
+            color: white;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .adaptive-button.secondary {
+            border: 1px solid #cbd5e1;
+            background: #fff;
+            color: #172033;
+        }
+
+        .adaptive-button:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .adaptive-status {
+            margin-top: 16px;
+            color: #475569;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        .adaptive-status.error {
+            color: #b91c1c;
+        }
+
+        .adaptive-status.success {
+            color: #166534;
+        }
+
+        .adaptive-question {
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .adaptive-question h3 {
+            margin: 0 0 8px;
+            color: #172033;
+            font-size: 1.1rem;
+        }
+
+        .adaptive-note {
+            margin-top: 14px;
+            color: #64748b;
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            .adaptive-card {
+                padding: 20px;
+            }
+
+            .adaptive-actions {
+                flex-direction: column;
+            }
+
+            .adaptive-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="../index.html" class="logo">
+        <span class="logo-icon">+</span>
+        <span>Smart<span class="logo-red">EMS</span></span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <div class="nav-actions">
+        <a href="login.html" class="login-link">Login</a>
+        <a href="signup.html" class="signup-btn">Get Started</a>
+    </div>
+</header>
+
+<main class="emergency-page">
+    <div class="emergency-container">
+
+        <span class="eyebrow">SMARTEMS EMERGENCY RESPONSE</span>
+
+        <h1>
+            Need emergency
+            <span>assistance?</span>
+        </h1>
+
+        <p class="emergency-description">
+            Press SOS to begin the existing emergency assessment, or describe
+            the situation using Adaptive Voice/Text Triage.
+        </p>
+
+        <!-- EXISTING SOS CARD: preserved -->
+        <div class="sos-card">
+            <div class="sos-status">
+                <span class="status-dot"></span>
+                Emergency services ready
+            </div>
+
+            <button class="sos-main-button" id="sosButton">
+                <span class="sos-symbol">SOS</span>
+                <span class="sos-text">GET EMERGENCY HELP</span>
+            </button>
+
+            <p class="sos-note">
+                Tap once to activate the existing emergency assistance flow
+            </p>
+        </div>
+
+        <!-- NEW ADAPTIVE VOICE/TEXT TRIAGE -->
+        <section class="adaptive-card" aria-labelledby="adaptiveTitle">
+            <h2 id="adaptiveTitle">Adaptive Voice &amp; Text Triage</h2>
+
+            <p class="adaptive-intro">
+                Describe what happened in your own words. SmartEMS will try to
+                recognize the emergency type and information already provided,
+                then ask follow-up questions for missing details.
+            </p>
+
+            <label class="adaptive-label" for="emergencyDescription">
+                Describe the emergency
+            </label>
+
+            <textarea
+                id="emergencyDescription"
+                class="adaptive-input"
+                rows="4"
+                maxlength="3000"
+                placeholder="Example: There was a road accident. The person is conscious but has bleeding."
+            ></textarea>
+
+            <div class="adaptive-actions">
+                <button
+                    type="button"
+                    id="startVoiceButton"
+                    class="adaptive-button secondary"
+                >
+                    🎙️ Speak
+                </button>
+
+                <button
+                    type="button"
+                    id="stopVoiceButton"
+                    class="adaptive-button secondary"
+                    hidden
+                >
+                    Stop speaking
+                </button>
+
+                <button
+                    type="button"
+                    id="startAdaptiveButton"
+                    class="adaptive-button"
+                >
+                    Start Adaptive Triage
+                </button>
+            </div>
+
+            <p class="adaptive-note">
+                Speech recognition requires browser support and microphone
+                permission. You can always type instead. This academic prototype
+                is not a substitute for professional emergency services.
+            </p>
+
+            <div
+                id="adaptiveStatus"
+                class="adaptive-status"
+                role="status"
+                aria-live="polite"
+            ></div>
+
+            <div id="adaptiveQuestionArea" class="adaptive-question" hidden>
+                <h3 id="adaptiveQuestionText"></h3>
+
+                <label
+                    id="adaptiveAnswerLabel"
+                    class="adaptive-label"
+                    for="adaptiveAnswer"
+                >
+                    Select or enter your answer
+                </label>
+
+                <div id="adaptiveAnswerContainer"></div>
+
+                <div class="adaptive-actions">
+                    <button
+                        type="button"
+                        id="submitAdaptiveAnswer"
+                        class="adaptive-button"
+                    >
+                        Submit Answer
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOCATION CARD: preserved -->
+        <div class="location-card">
+            <div class="location-icon">📍</div>
+
+            <div class="location-content">
+                <strong>Your location</strong>
+                <p id="locationStatus">
+                    Location will be detected automatically after activating SOS.
+                </p>
+            </div>
+        </div>
+
+        <!-- RESPONSE STEPS: preserved -->
+        <div class="response-section">
+            <h2>What happens next?</h2>
+
+            <div class="response-grid">
+                <div class="response-card">
+                    <span class="response-number">01</span>
+                    <div class="response-icon">📍</div>
+                    <h3>Location detected</h3>
+                    <p>Your current location can be identified when location access is available.</p>
+                </div>
+
+                <div class="response-card">
+                    <span class="response-number">02</span>
+                    <div class="response-icon">🧠</div>
+                    <h3>Severity assessed</h3>
+                    <p>The emergency is assessed using the SmartEMS triage prototype.</p>
+                </div>
+
+                <div class="response-card">
+                    <span class="response-number">03</span>
+                    <div class="response-icon">🚑</div>
+                    <h3>Ambulance assigned</h3>
+                    <p>The system attempts to assign an available ambulance from its backend records.</p>
+                </div>
+
+                <div class="response-card">
+                    <span class="response-number">04</span>
+                    <div class="response-icon">🏥</div>
+                    <h3>Hospital coordination</h3>
+                    <p>Hospital coordination depends on the integrations available in this prototype.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-main">
+        <div class="footer-brand">
+            <a href="../index.html" class="logo footer-logo">
+                <span class="logo-icon">+</span>
+                <span>Smart<span class="logo-red">EMS</span></span>
+            </a>
+
+            <p>Intelligent Emergency Triage &amp; Ambulance Dispatch System.</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Platform</h4>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Account</h4>
+            <a href="login.html">User Login</a>
+            <a href="signup.html">Create Account</a>
+            <a href="admin-login.html">Admin Portal</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Emergency</h4>
+            <a href="emergency.html">Request Assistance</a>
+            <a href="tracking.html">Track Ambulance</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 SmartEMS. Academic Project.</span>
+        <span>Emergency Medical Response System</span>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

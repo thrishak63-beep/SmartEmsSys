@@ -1,0 +1,109 @@
+{
+  "Road Accident": [
+    ["conscious", "Is the patient conscious?", ["Yes", "No"]],
+    ["breathing", "Is the patient breathing normally?", ["Normal", "Abnormal", "Absent"]],
+    ["bleeding", "How severe is the bleeding?", ["None", "Minor", "Severe"]],
+    ["accident_level", "How serious is the accident?", ["Minor", "Moderate", "Severe"]],
+    ["visible_fracture", "Is there a visible fracture?", ["Yes", "No"]],
+    ["trapped", "Is the patient trapped inside the vehicle?", ["Yes", "No"]],
+    ["injury_type", "What type of injury is present?", ["Limb Injury", "Head Injury", "Multiple Injuries"]],
+    ["pain_level", "How severe is the pain?", ["Mild", "Moderate", "Severe"]],
+    ["head_injury", "Is there a head injury?", ["Yes", "No"]],
+    ["injury_location", "Where is the main injury located?", ["Head", "Chest", "Arm", "Leg", "Multiple Areas"]],
+    ["visible_injury", "Is there a visible injury?", ["Yes", "No"]]
+  ],
+
+  "Animal Bite": [
+    ["animal_type", "What animal caused the bite?", ["Dog", "Cat", "Snake", "Other"]],
+    ["bite_location", "Where is the bite located?", ["Arm", "Leg", "Hand", "Face"]],
+    ["venomous", "Is the animal known or suspected to be venomous?", ["Yes", "No"]],
+    ["bleeding", "How severe is the bleeding?", ["None", "Minor", "Severe"]],
+    ["conscious", "Is the patient conscious?", ["Yes", "No"]],
+    ["breathing", "Is the patient breathing normally?", ["Normal", "Abnormal", "Absent"]],
+    ["pain_level", "How severe is the pain?", ["Mild", "Moderate", "Severe"]],
+    ["visible_injury", "Is there a visible injury?", ["Yes", "No"]]
+  ],
+
+  "Heart Attack": [
+    ["conscious", "Is the patient conscious?", ["Yes", "No"]],
+    ["breathing", "Is the patient breathing normally?", ["Normal", "Abnormal", "Absent"]],
+    ["chest_pain", "How severe is the chest pain?", ["Mild", "Moderate", "Severe"]],
+    ["pain_level", "How severe is the overall pain?", ["Mild", "Moderate", "Severe"]],
+    ["sweating", "Is the patient sweating unusually?", ["Yes", "No"]],
+    ["shortness_of_breath", "Is the patient experiencing shortness of breath?", ["Yes", "No"]],
+    ["vomiting", "Is the patient vomiting?", ["Yes", "No"]]
+  ],
+
+  "Stroke": [
+    ["conscious", "Is the patient conscious?", ["Yes", "No"]],
+    ["breathing", "Is the patient breathing normally?", ["Normal", "Abnormal", "Absent"]],
+    ["face_drooping", "Is there facial drooping?", ["Yes", "No"]],
+    ["arm_weakness", "Does the patient have weakness in one arm?", ["Yes", "No"]],
+    ["speech_difficulty", "Does the patient have difficulty speaking?", ["Yes", "No"]],
+    ["head_injury", "Is there a head injury?", ["Yes", "No"]]
+  ],
+
+  "Burn Injury": [
+    ["conscious", "Is the patient conscious?", ["Yes", "No"]],
+    ["breathing", "Is the patient breathing normally?", ["Normal", "Abnormal", "Absent"]],
+    ["bleeding", "How severe is the bleeding?", ["None", "Minor", "Severe"]],
+    ["pain_level", "How severe is the pain?", ["Mild", "Moderate", "Severe"]],
+    ["injury_location", "Where is the burn located?", ["Head", "Chest", "Arm", "Leg", "Multiple Areas"]],
+    ["visible_injury", "Is there a visible injury?", ["Yes", "No"]],
+    ["injury_type", "What type of burn/injury is present?", ["First Degree Burn", "Second Degree Burn", "Third Degree Burn", "Severe Burn"]]
+  ],
+
+  "Poisoning": [
+    ["poison_type", "What was the substance involved?", ["Medicine", "Chemical", "Food", "Unknown"]],
+    ["conscious", "Is the patient conscious?", ["Yes", "No"]],
+    ["breathing", "Is the patient breathing normally?", ["Normal", "Abnormal", "Absent"]],
+    ["vomiting", "Is the patient vomiting?", ["Yes", "No"]],
+    ["seizures", "Is the patient having seizures?", ["Yes", "No"]]
+  ],
+
+  "Electric Shock": [
+    ["conscious", "Is the patient conscious?", ["Yes", "No"]],
+    ["breathing", "Is the patient breathing normally?", ["Normal", "Abnormal", "Absent"]],
+    ["entry_exit_burn", "Are there electrical entry or exit burns?", ["Yes", "No"]],
+    ["muscle_spasm", "Are muscle spasms present?", ["Yes", "No"]],
+    ["fall_after_shock", "Did the patient fall after the electric shock?", ["Yes", "No"]],
+    ["pain_level", "How severe is the pain?", ["Mild", "Moderate", "Severe"]],
+    ["visible_injury", "Is there a visible injury?", ["Yes", "No"]]
+  ],
+
+  "Drowning": [
+    ["water_type", "What type of water incident occurred?", ["Pool", "River", "Sea", "Lake", "Well"]],
+    ["conscious", "Is the patient conscious?", ["Yes", "No"]],
+    ["breathing", "Is the patient breathing normally?", ["Normal", "Abnormal", "Absent"]],
+    ["water_inhalation", "Did the patient inhale water?", ["Yes", "No"]],
+    ["cpr_required", "Was CPR required?", ["Yes", "No"]],
+    ["vomiting", "Is the patient vomiting?", ["Yes", "No"]],
+    ["seizures", "Is the patient having seizures?", ["Yes", "No"]]
+  ],
+
+  "Fall From Height": [
+    ["fall_height", "How high was the fall?", ["Low (< 2 m)", "Medium (2-5 m)", "High (> 5 m)"]],
+    ["conscious", "Is the patient conscious?", ["Yes", "No"]],
+    ["breathing", "Is the patient breathing normally?", ["Normal", "Abnormal", "Absent"]],
+    ["bleeding", "How severe is the bleeding?", ["None", "Minor", "Severe"]],
+    ["visible_fracture", "Is there a visible fracture?", ["Yes", "No"]],
+    ["head_injury", "Is there a head injury?", ["Yes", "No"]],
+    ["injury_type", "What type of injury is present?", ["Limb Injury", "Head Injury", "Multiple Injuries"]],
+    ["pain_level", "How severe is the pain?", ["Mild", "Moderate", "Severe"]],
+    ["injury_location", "Where is the main injury located?", ["Head", "Chest", "Arm", "Leg", "Multiple Areas"]],
+    ["visible_injury", "Is there a visible injury?", ["Yes", "No"]]
+  ],
+
+  "Assault": [
+    ["conscious", "Is the patient conscious?", ["Yes", "No"]],
+    ["breathing", "Is the patient breathing normally?", ["Normal", "Abnormal", "Absent"]],
+    ["bleeding", "How severe is the bleeding?", ["None", "Minor", "Severe"]],
+    ["weapon_involved", "What type of weapon was involved?", ["Sharp Object", "Other Weapon"]],
+    ["visible_fracture", "Is there a visible fracture?", ["Yes", "No"]],
+    ["head_injury", "Is there a head injury?", ["Yes", "No"]],
+    ["injury_type", "What type of injury is present?", ["Limb Injury", "Head Injury", "Multiple Injuries"]],
+    ["pain_level", "How severe is the pain?", ["Mild", "Moderate", "Severe"]],
+    ["injury_location", "Where is the main injury located?", ["Head", "Chest", "Arm", "Leg", "Multiple Areas"]],
+    ["visible_injury", "Is there a visible injury?", ["Yes", "No"]]
+  ]
+}

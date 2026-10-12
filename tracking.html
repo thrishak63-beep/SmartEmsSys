@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Ambulance | SmartEMS</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="navbar">
+    <a href="../index.html" class="logo">
+        <span class="logo-icon">+</span>
+        <span>Smart<span class="logo-red">EMS</span></span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <div class="nav-actions">
+        <a href="emergency.html" class="dashboard-emergency">Emergency</a>
+        <a href="login.html" class="login-link">Logout</a>
+    </div>
+</header>
+
+<main class="tracking-page">
+    <div class="tracking-container">
+
+        <div class="triage-result" id="triageResultBox">
+            <h2>Emergency Triage Result</h2>
+            <p><strong>Priority:</strong> <span id="triagePrediction">Loading...</span></p>
+
+            <h3>ML Confidence</h3>
+            <p>Critical: <strong id="criticalProbability">-</strong></p>
+            <p>Urgent: <strong id="urgentProbability">-</strong></p>
+            <p>Non-Urgent: <strong id="nonUrgentProbability">-</strong></p>
+        </div>
+
+        <div class="tracking-header">
+            <div>
+                <span class="dashboard-eyebrow">EMERGENCY RESPONSE</span>
+                <h1>Ambulance <span>Tracking</span></h1>
+                <p>View your emergency response and assigned ambulance details.</p>
+            </div>
+            <span class="tracking-status">● Dispatch Status</span>
+        </div>
+
+        <div class="tracking-grid">
+            <div class="tracking-map-card">
+                <div class="map-topbar">
+                    <div>
+                        <span class="map-label">DEMO MAP</span>
+                        <strong>Illustrative ambulance route</strong>
+                    </div>
+                    <span class="map-live">DEMO</span>
+                </div>
+
+                <div class="tracking-map" role="img" aria-label="Illustrative map showing patient, ambulance and hospital markers; not live GPS data.">
+                    <div class="map-grid-lines"></div>
+                    <div class="route-line"></div>
+
+                    <div class="map-marker user-marker">
+                        <span class="marker-pulse"></span>
+                        <div class="marker-icon">📍</div>
+                    </div>
+
+                    <div class="map-marker ambulance-marker">
+                        <div class="ambulance-icon">🚑</div>
+                    </div>
+
+                    <div class="map-marker hospital-marker">
+                        <div class="hospital-icon">🏥</div>
+                    </div>
+
+                    <div class="map-label-box user-label">Your Location</div>
+                    <div class="map-label-box ambulance-label">Ambulance</div>
+                    <div class="map-label-box hospital-label">Hospital</div>
+                </div>
+
+                <div class="map-footer">
+                    <span id="locationUpdate">Demo route — live location unavailable</span>
+                    <span>ETA: <strong>Not available</strong></span>
+                </div>
+
+                <p class="hospital-description">
+                    This map is a prototype visualization. Live GPS coordinates and a verified arrival estimate are not connected.
+                </p>
+            </div>
+
+            <div class="tracking-details">
+                <div class="tracking-card eta-card">
+                    <span class="card-label">ESTIMATED ARRIVAL</span>
+                    <div class="eta-time">-- <span>min</span></div>
+                    <p>A verified arrival estimate is not available in this prototype.</p>
+                </div>
+
+                <div class="tracking-card">
+                    <div class="tracking-card-header">
+                        <div>
+                            <span class="card-label">AMBULANCE</span>
+                            <h2 id="ambulanceId">Loading...</h2>
+                        </div>
+                        <div class="ambulance-small">🚑</div>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Vehicle</span>
+                        <strong id="ambulanceVehicle">Loading...</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Status</span>
+                        <strong id="ambulanceStatus" class="active-text">Loading...</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Contact</span>
+                        <strong id="ambulanceContact">Loading...</strong>
+                    </div>
+                </div>
+
+                <div class="tracking-card">
+                    <span class="card-label">DESTINATION</span>
+                    <h2>Hospital Information</h2>
+                    <p class="hospital-description">
+                        Hospital selection and destination details depend on the dispatch information available from the backend.
+                    </p>
+                    <div class="hospital-status">
+                        🏥 Hospital details are not displayed by the current tracking script.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="timeline-section">
+            <div class="section-heading-dashboard">
+                <span class="card-label">RESPONSE PROGRESS</span>
+                <h2>Emergency Timeline</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">✓</div>
+                    <div class="timeline-content">
+                        <strong>Emergency request received</strong>
+                        <span>The emergency request was registered in the workflow.</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">✓</div>
+                    <div class="timeline-content">
+                        <strong>Emergency severity assessed</strong>
+                        <span>The triage system assessed the emergency priority.</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">✓</div>
+                    <div class="timeline-content">
+                        <strong>Ambulance dispatch processed</strong>
+                        <span>The dispatch response provides the assigned ambulance details.</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item active">
+                    <div class="timeline-marker">🚑</div>
+                    <div class="timeline-content">
+                        <strong>Dispatch status</strong>
+                        <span>The current ambulance status is shown in the response details above.</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">5</div>
+                    <div class="timeline-content">
+                        <strong>Hospital arrival</strong>
+                        <span>Arrival confirmation is not yet connected to this prototype.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="tracking-actions">
+            <a href="emergency.html" class="dashboard-emergency">Back to Emergency Assistance</a>
+            <a href="../index.html" class="login-link">Return Home</a>
+        </div>
+    </div>
+</main>
+
+<script src="../js/script.js"></script>
+<script src="../js/tracking.js"></script>
+</body>
+</html>
